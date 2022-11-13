@@ -1,12 +1,14 @@
 import axios from 'axios'
 
 const httpClient = axios.create({
-    baseURL: process.env.REACT_APP_API_URL,
+    baseURL: import.meta.env.VITE_REACT_API_URL,
 })
 
 httpClient.interceptors.request.use((config) => {
-    const token = JSON.parse(localStorage.getItem('token')!)
-    if (token && config.headers) config.headers.Authorization = token
+    if (config.headers) {
+        config.headers['X-RapidAPI-Key'] = import.meta.env.VITE_API_KEY
+        config.headers['X-RapidAPI-Host'] = import.meta.env.VITE_API_HOST
+    }
     return config
 })
 
