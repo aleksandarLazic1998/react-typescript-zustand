@@ -25,5 +25,6 @@ module.exports = {
         'no-tabs': 'off',
         '@typescript-eslint/comma-dangle': 'off',
         'no-param-reassign': 'off',
+        'import/prefer-default-export': 'off',
     },
 }
