@@ -11,7 +11,7 @@ Exploring possibilities of working with Zustand as state manager
 ### Instalation
 
   ```
-  git clone https://github.com/aleksandarLazic1998/rtk-advance.git
+  git clone https://github.com/aleksandarLazic1998/react-typescript-zustand.git
   cd react-typescript-zustand
   npm install && npm start
   ```
